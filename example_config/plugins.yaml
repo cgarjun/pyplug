@@ -1,0 +1,7 @@
+plugin_path: D:/development/pyplug/example_plugins
+plugin_list:
+    plugin_a:
+        enable: true
+        args:
+          myarg: blah
+          jack: this is jack

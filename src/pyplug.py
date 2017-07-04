@@ -1,9 +1,15 @@
+import sys
 import os
 import yaml
 
 class PluginManager(object):
 	def __init__(self, config=None):
-		self._plugin_config = yaml.load(file('plugins.yaml', 'r'))
+		self._plugin_config = yaml.load(file(config))
+		self.setup()
+
+	def setup(self):
+		sys.path.append(os.path.abspath(self.plugin_config['plugin_path']))
+
 
 	def import_plugins(self, plugin_name):
 		m = __import__(plugin_name)
@@ -15,7 +21,7 @@ class PluginManager(object):
 
 	def run_all_plugins(self):
 		for i in self.plugin_list:
-			self.run_plugin(i, self.plugin_list[i])
+			self.run_plugin(i, self.plugin_list[i]['args'])
 
 	@property
 	def plugin_config(self):
@@ -25,3 +31,5 @@ class PluginManager(object):
 	def plugin_list(self):
 	    return self._plugin_config['plugin_list']
 	
+a = PluginManager(os.path.abspath('../example_config/plugins.yaml'))
+a.run_all_plugins()
