@@ -21,4 +21,6 @@ from pyplug import PluginManager
 
 pm = PluginManager(os.path.abspath('../example_config/plugins.yaml'))
 pm.run_all_plugins()
+or
+pm.run_plugin('plugin_b')
 ```
