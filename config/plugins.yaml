@@ -1,0 +1,8 @@
+plugin_list:
+    plugin_a:
+        myarg: blah
+        jack: this is jack
+
+    plugin_b:
+        myarg: plug 2
+        jack: second plug
