@@ -4,7 +4,7 @@ This is simple plugin system based out of python, you can basically pass a confi
 ## Requirements
 ```python
 Python 2.7
-pip install PyYaml`
+pip install PyYaml
 ```
 
 ## example_config
