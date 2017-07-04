@@ -8,20 +8,28 @@ class PluginManager(object):
 		self.setup()
 
 	def setup(self):
-		sys.path.append(os.path.abspath(self.plugin_config['plugin_path']))
-
+		try:
+			sys.path.append(os.path.abspath(self.plugin_config['plugin_path']))
+		except KeyError:
+			pass
 
 	def import_plugins(self, plugin_name):
 		m = __import__(plugin_name)
 		return m
 
-	def run_plugin(self, plugin_name, args_dict):
+	def run_plugin(self, plugin_name):
+		args = {}
 		plug = self.import_plugins(plugin_name)
-		plug.main(**args_dict)
+		try:
+			args = self.plugin_list[plugin_name]['args']
+		except KeyError:
+			pass
+		if self.plugin_list[plugin_name]['enable']:
+			plug.main(**args)
 
 	def run_all_plugins(self):
-		for i in self.plugin_list:
-			self.run_plugin(i, self.plugin_list[i]['args'])
+		for plug in self.plugin_list:
+			self.run_plugin(plug)
 
 	@property
 	def plugin_config(self):
@@ -30,4 +38,3 @@ class PluginManager(object):
 	@property
 	def plugin_list(self):
 	    return self._plugin_config['plugin_list']
-	
