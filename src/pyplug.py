@@ -31,5 +31,3 @@ class PluginManager(object):
 	def plugin_list(self):
 	    return self._plugin_config['plugin_list']
 	
-a = PluginManager(os.path.abspath('../example_config/plugins.yaml'))
-a.run_all_plugins()
