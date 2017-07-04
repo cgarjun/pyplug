@@ -2,9 +2,10 @@
 This is simple plugin system based out of python, you can basically pass a config file with all necessary requirements and get the plugins to be executed
 
 ## Requirements
-
-* Python 2.7
-* `pip install PyYaml`
+```python
+Python 2.7
+pip install PyYaml`
+```
 
 ## example_config
 
@@ -19,4 +20,5 @@ This is also extremly simple make any python file with a main function
 from pyplug import PluginManager
 
 pm = PluginManager(os.path.abspath('../example_config/plugins.yaml'))
-pm.run_all_plugins()```
+pm.run_all_plugins()
+```
