@@ -15,6 +15,8 @@ Simple example of how config should be formatted. This is basically yaml format 
 This is also extremly simple make any python file with a main function
 
 ## Usage
-`from pyplug import PluginManager`
-`pm = PluginManager(os.path.abspath('../example_config/plugins.yaml'))`
-`pm.run_all_plugins()`
+```python
+from pyplug import PluginManager
+
+pm = PluginManager(os.path.abspath('../example_config/plugins.yaml'))
+pm.run_all_plugins()```
