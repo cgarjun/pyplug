@@ -10,6 +10,18 @@ pip install PyYaml
 ## example_config
 
 Simple example of how config should be formatted. This is basically yaml format and easy human readable
+```
+plugin_path: D:\development\pyplug\example_plugins
+plugin_list:
+    plugin_a:
+        enable: false
+        args:
+          myarg: blah
+          jack: this is jack
+
+    plugin_b:
+        enable: true
+```
 
 ## example_plugins
 
