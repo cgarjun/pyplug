@@ -11,16 +11,22 @@ pip install PyYaml
 
 Simple example of how config should be formatted. This is basically yaml format and easy human readable
 ```
-plugin_path: D:\development\pyplug\example_plugins
-plugin_list:
-    plugin_a:
-        enable: false
-        args:
-          myarg: blah
-          jack: this is jack
+pluginpath: D:\development\pyplug\example_plugins
+plugins:
+  plugin_name_a:
+    enable: true
+    args:
+      arg_a: blah
+      arg_b: hello
 
-    plugin_b:
-        enable: true
+  plugin_name_b:
+    enable: false
+
+  plugin_name_c:
+    enable: true
+    args:
+      arg_a: blah
+      arg_b: hello
 ```
 
 ## example_plugins
@@ -32,7 +38,7 @@ This is also extremly simple make any python file with a main function
 from pyplug import PluginManager
 
 pm = PluginManager('../example_config/plugins.yaml')
-pm.run_all_plugins()
+pm.runPlugins()
 or
-pm.run_plugin('plugin_b')
+pm.runPlugin('plugin_b')
 ```
