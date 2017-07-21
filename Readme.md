@@ -42,3 +42,16 @@ pm.runPlugins()
 or
 pm.runPlugin('plugin_b')
 ```
+List all availabel plugins from the config
+
+```pm.listPlugins()
+['plugin_a', 'plugin_b']
+```
+Get the plugin object separate and execute it independent
+```pl = pm.getPlugin('plugin_name_a')
+print pl.enable
+print pl.args
+
+
+pl.execute()
+```
