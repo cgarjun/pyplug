@@ -1,5 +1,4 @@
-[![Build Status]['Passed']]
-# pyplug
+# PyPlug
 This is simple plugin system based out of python, you can basically pass a config file with all necessary requirements and get the plugins to be executed
 
 ## Requirements
