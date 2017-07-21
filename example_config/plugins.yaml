@@ -1,10 +1,16 @@
-plugin_path: D:\development\pyplug\example_plugins
-plugin_list:
-    plugin_a:
-        enable: false
-        args:
-          myarg: blah
-          jack: this is jack
+pluginpath: D:\development\pyplug\example_plugins
+plugins:
+  plugin_name_a:
+    enable: true
+    args:
+      arg_a: blah
+      arg_b: hello
 
-    plugin_b:
-        enable: true
+  plugin_name_b:
+    enable: false
+
+  plugin_name_c:
+    enable: true
+    args:
+      arg_a: blah
+      arg_b: hello
