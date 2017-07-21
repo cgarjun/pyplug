@@ -52,7 +52,9 @@ Get the plugin object separate and execute it independent
 ```python
 pl = pm.getPlugin('plugin_name_a')
 print pl.enable
+True
 print pl.args
+{'arg_a': 'blah', 'arg_b': 'hello'}
 
 
 pl.execute()
