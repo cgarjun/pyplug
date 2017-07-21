@@ -1,6 +1,4 @@
-[![Build Status][travis-icon]][travis-link]
-[travis-icon]: https://travis-ci.org/videojs/video.js.svg?branch=master
-[travis-link]: https://travis-ci.org/videojs/video.js
+[![Build Status]['Passed']]
 # pyplug
 This is simple plugin system based out of python, you can basically pass a config file with all necessary requirements and get the plugins to be executed
 
