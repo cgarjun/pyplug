@@ -50,7 +50,7 @@ pm.listPlugins()
 ```
 Get the plugin object separate and execute it independent
 ```python
-pl = pm.getPlugin('plugin_name_a')
+pl = pm.getPlugin('plugin_a')
 print pl.enable
 True
 print pl.args
