@@ -1,3 +1,7 @@
+# Deprecated
+This package is deprecated in favour of https://github.com/cgarjun/plugd
+plugd is actually been used in production 
+
 # PyPlug
 This is simple plugin system based out of python, you can basically pass a config file with all necessary requirements and get the plugins to be executed
 
